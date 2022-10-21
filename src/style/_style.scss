@@ -88,10 +88,14 @@ body {
   text-transform: uppercase;
   font-size: calc($index * 1.65);
   letter-spacing: calc($index * 0.3);
+  transform: translate3d(0, calc(var(--scrollTop) / -12), 0);// scroll parallax
+  will-change: transform;
 }
 .main-article_text {
   max-width: calc($index * 30);
   font-size: calc($index * 1.02);
+  transform: translate3d(0, calc(var(--scrollTop) / -12), 0);// scroll parallax
+  will-change: transform;
 }
 .copy {
   left: 40%;
