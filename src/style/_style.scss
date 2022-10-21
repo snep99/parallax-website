@@ -6,6 +6,18 @@ body {
 .main-header {
   position: relative;
 }
+.main-header::after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: calc($index * 9);
+  bottom: calc($index * -4.65);
+  background-image: url(img/ground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .layers {
   height: 100vh;
   display: flex;
@@ -44,7 +56,7 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   color: $c_font;
-  text-shadow: 0 0 25px $c_shadow;
+  text-shadow: 0 0 10px $c_shadow;
 }
 .layers_caption{
   font-size: calc($index * 0.85);
