@@ -1,11 +1,13 @@
 body {
-  max-width: 500px;
-  margin: auto;
-  background-color: $back;
-  color: $text;
-  font-family: 'ABeeZee', sans-serif;
+  background-color: $c_back;
+  color: $c_font;
+  font-family: Raleway-Reg, sans-serif;
+  line-height: 1.55;
 }
 
-img {
-  max-width: 300px;
+.main-header {
+  position: relative;
+}
+.layers {
+  
 }
