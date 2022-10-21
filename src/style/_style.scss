@@ -1,6 +1,4 @@
 body {
-  background-color: $c_back;
-  color: $c_font;
   font-family: Raleway-Reg, sans-serif;
   line-height: 1.55;
 }
@@ -24,10 +22,12 @@ body {
   background-position: center;
   position: absolute;
   will-change: transform;
+  z-index: 2;
 }
 .layers_base {
   background-image: url(img/layer-base.png);
   transform: translate3d(0, calc(var(--scrollTop) / 1.55), 0);// scroll parallax
+  z-index: 0;
 }
 .layers_middle {
   background-image: url(img/layer-middle.png);
@@ -39,6 +39,21 @@ body {
 }
 .layer_header {
   z-index: 1;
+  transform: translate3d(0, calc(var(--scrollTop) / 1.7), 0);// scroll parallax
+  will-change: transform;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $c_font;
+  text-shadow: 0 0 25px $c_shadow;
+}
+.layers_caption{
+  font-size: calc($index * 0.85);
+  letter-spacing: calc($index * 0.7);
+  margin-top: calc($index * -0.85);;
+}
+.layers_title{
+  font-size: calc($index * 2.05);
+  letter-spacing: calc($index * 0.5);
 }
 .main-article {
   min-height: 100vh;
