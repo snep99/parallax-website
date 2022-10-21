@@ -9,5 +9,43 @@ body {
   position: relative;
 }
 .layers {
-  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.layer {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  will-change: transform;
+}
+.layers_base {
+  background-image: url(img/layer-base.png);
+  transform: translate3d(0, calc(var(--scrollTop) / 1.55), 0);// scroll parallax
+}
+.layers_middle {
+  background-image: url(img/layer-middle.png);
+  transform: translate3d(0, calc(var(--scrollTop) / 2.65), 0);// scroll parallax
+}
+.layers_front {
+  background-image: url(img/layer-front.png);
+  transform: translate3d(0, calc(var(--scrollTop) / 5.2), 0);// scroll parallax
+}
+.layer_header {
+  z-index: 1;
+}
+.main-article {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  background-image: url(img/dungeon.jpg);
+  overflow: hidden;
 }
